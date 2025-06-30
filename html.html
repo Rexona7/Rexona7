@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mate con Libritos</title>
+    <link rel="icon" href="https://via.placeholder.com/32x32?text=B" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="#" class="logo">Mate con Libritos</a>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Catálogo</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Préstamos</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Eventos</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="nav-buttons">
+                <button class="btn-login" id="login-btn">Iniciar sesión</button>
+                <button class="btn-register" id="register-btn">Registrarse</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <h1 class="hero-title">Preparate. que los libros ya estan listo y el mate tambien.</h1>
+                <p class="hero-subtitle">
+                    Accede a nuestra vasta colección de libros y recursos académicos desde cualquier lugar.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#" class="button-primary">Explorar catálogo</a>
+                    <a href="#" class="button-primary">Nuevos lanzamientos</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="search-bar">
+            <div class="container">
+                <div class="search-container" id="search-container">
+                    <input 
+                        type="text" 
+                        id="search-input" 
+                        placeholder="Buscar libros, autores, temas..." 
+                        class="search-input"
+                    >
+                    <button class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <ul class="search-suggestions hidden" id="search-suggestions">
+                    </ul>
+            </div>
+        </section>
+
+        <section class="featured-books-section">
+            <div class="container">
+                <div class="featured-books-header">
+                    <h2 class="featured-books-title">Libros Destacados</h2>
+                    <a href="#" class="featured-books-view-all">Ver todos</a>
+                </div>
+                <div class="book-grid">
+                    <div class="book-card">
+                        <div class="book-card-image">
+                            <img src="https://via.placeholder.com/280x250/f0f0f0/333333?text=Libro+1" alt="Portada del libro">
+                        </div>
+                        <div class="book-card-content">
+                            <h3 class="book-title">La Era Digital</h3>
+                            <p class="book-author">Por Ana Gómez</p>
+                            <span class="book-status status-available">
+                                <i class="fas fa-check-circle"></i> Disponible
+                            </span>
+                            <button class="book-card-button">Reservar</button>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-card-image">
+                            <img src="https://via.placeholder.com/280x250/f0f0f0/333333?text=Libro+2" alt="Portada del libro">
+                        </div>
+                        <div class="book-card-content">
+                            <h3 class="book-title">Principios de Economía</h3>
+                            <p class="book-author">Por Carlos Ruiz</p>
+                            <span class="book-status status-available">
+                                <i class="fas fa-check-circle"></i> Disponible
+                            </span>
+                            <button class="book-card-button">Reservar</button>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-card-image">
+                            <img src="https://via.placeholder.com/280x250/f0f0f0/333333?text=Libro+3" alt="Portada del libro">
+                        </div>
+                        <div class="book-card-content">
+                            <h3 class="book-title">Misterios del Universo</h3>
+                            <p class="book-author">Por Laura Pérez</p>
+                            <span class="book-status status-unavailable">
+                                <i class="fas fa-times-circle"></i> No disponible
+                            </span>
+                            <button class="book-card-button" disabled>Reservar</button>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-card-image">
+                            <img src="https://via.placeholder.com/280x250/f0f0f0/333333?text=Libro+4" alt="Portada del libro">
+                        </div>
+                        <div class="book-card-content">
+                            <h3 class="book-title">Filosofía Clásica</h3>
+                            <p class="book-author">Por David García</p>
+                            <span class="book-status status-available">
+                                <i class="fas fa-check-circle"></i> Disponible
+                            </span>
+                            <button class="book-card-button">Reservar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="events-section">
+            <div class="events-header">
+                <h2 class="events-title">Próximos eventos</h2>
+                <a href="#" class="events-view-all">Ver todos</a>
+            </div>
+            
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-card-image event-image-blue">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="event-card-content">
+                        <div class="event-card-info">
+                            <h3 class="event-title">Club de lectura</h3>
+                            <span class="event-date-tag event-date-blue">15 Mayo</span>
+                        </div>
+                        <p class="event-description">Únete a nuestro club de lectura mensual donde discutiremos el libro seleccionado.</p>
+                        <button class="event-button button-blue">
+                            Más información
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="event-card">
+                    <div class="event-card-image event-image-green">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="event-card-content">
+                        <div class="event-card-info">
+                            <h3 class="event-title">Taller de investigación</h3>
+                            <span class="event-date-tag event-date-green">22 Mayo</span>
+                        </div>
+                        <p class="event-description">Aprende técnicas avanzadas de investigación académica con nuestros expertos.</p>
+                        <button class="event-button button-green">
+                            Más información
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="event-card">
+                    <div class="event-card-image event-image-purple">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <div class="event-card-content">
+                        <div class="event-card-info">
+                            <h3 class="event-title">Introducción a Python</h3>
+                            <span class="event-date-tag event-date-purple">30 Mayo</span>
+                        </div>
+                        <p class="event-description">Taller práctico para aprender los fundamentos del lenguaje de programación Python.</p>
+                        <button class="event-button button-purple">
+                            Más información
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-heading">Biblioteca Digital</h3>
+                    <p class="footer-text">
+                        Tu centro de recursos académicos en línea. Accede a miles de libros, gestiona tus préstamos y participa en nuestros eventos.
+                    </p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-heading">Enlaces rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Inicio</a></li>
+                        <li><a href="#" class="footer-link">Catálogo</a></li>
+                        <li><a href="#" class="footer-link">Préstamos</a></li>
+                        <li><a href="#" class="footer-link">Eventos</a></li>
+                        <li><a href="#" class="footer-link">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-heading">Contacto</h3>
+                    <ul class="footer-contact-list">
+                        <li class="footer-contact-item">
+                            <i class="fas fa-map-marker-alt"></i> El bufet de mario
+                        </li>
+                        <li class="footer-contact-item">
+                            <i class="fas fa-phone"></i> (123) 456-7890
+                        </li>
+                        <li class="footer-contact-item">
+                            <i class="fas fa-envelope"></i> contacto@Mate con Libritos.edu
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-heading">Síguenos</h3>
+                    <div class="footer-social-links">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                    
+                    <h3 class="footer-heading footer-subscribe-heading">Suscríbete</h3>
+                    <div class="subscribe-form">
+                        <input 
+                            type="email" 
+                            placeholder="Tu correo" 
+                            class="subscribe-input"
+                        >
+                        <button class="subscribe-button">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom-text">
+                <p>&copy; 2025 Biblioteca Digital. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal-overlay hidden" id="login-modal">
+        <div class="modal-content-box">
+            <div class="modal-header">
+                <h3 class="modal-title">Iniciar sesión</h3>
+                <button class="modal-close-button" id="close-login-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <form id="login-form" class="modal-form">
+                <div class="form-group">
+                    <label for="login-email" class="form-label">Correo electrónico</label>
+                    <input 
+                        type="email" 
+                        id="login-email" 
+                        class="form-input"
+                        required
+                    >
+                </div>
+                
+                <div class="form-group">
+                    <label for="login-password" class="form-label">Contraseña</label>
+                    <input 
+                        type="password" 
+                        id="login-password" 
+                        class="form-input"
+                        required
+                    >
+                    <a href="#" class="form-link">¿Olvidaste tu contraseña?</a>
+                </div>
+                
+                <div class="form-checkbox">
+                    <input 
+                        type="checkbox" 
+                        id="remember-me" 
+                    >
+                    <label for="remember-me" class="checkbox-label">Recordarme</label>
+                </div>
+                
+                <button type="submit" class="button-primary modal-button-submit">
+                    Iniciar sesión
+                </button>
+                
+                <p class="modal-text-center">
+                    ¿No tienes una cuenta? 
+                    <a href="#" class="form-link" id="show-register-from-login">Regístrate</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-overlay hidden" id="register-modal">
+        <div class="modal-content-box">
+            <div class="modal-header">
+                <h3 class="modal-title">Registrarse</h3>
+                <button class="modal-close-button" id="close-register-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <form id="register-form" class="modal-form">
+                <div class="form-group">
+                    <label for="register-name" class="form-label">Nombre completo</label>
+                    <input 
+                        type="text" 
+                        id="register-name" 
+                        class="form-input"
+                        required
+                    >
+                </div>
+                
+                <div class="form-group">
+                    <label for="register-email" class="form-label">Correo electrónico</label>
+                    <input 
+                        type="email" 
+                        id="register-email" 
+                        class="form-input"
+                        required
+                    >
+                </div>
+                
+                <div class="form-group">
+                    <label for="register-password" class="form-label">Contraseña</label>
+                    <input 
+                        type="password" 
+                        id="register-password" 
+                        class="form-input"
+                        required
+                    >
+                </div>
+                
+                <div class="form-group">
+                    <label for="register-confirm-password" class="form-label">Confirmar contraseña</label>
+                    <input 
+                        type="password" 
+                        id="register-confirm-password" 
+                        class="form-input"
+                        required
+                    >
+                </div>
+                
+                <div class="form-group">
+                    <label for="register-role" class="form-label">Tipo de usuario</label>
+                    <select 
+                        id="register-role" 
+                        class="form-input"
+                        required
+                    >
+                        <option value="">Selecciona una opción</option>
+                        <option value="student">Estudiante</option>
+                        <option value="teacher">Profesor</option>
+                        <option value="staff">Personal de biblioteca</option>
+                    </select>
+                </div>
+                
+                <div class="form-checkbox">
+                    <input 
+                        type="checkbox" 
+                        id="terms" 
+                        required
+                    >
+                    <label for="terms" class="checkbox-label">
+                        Acepto los <a href="#" class="form-link">términos y condiciones</a>
+                    </label>
+                </div>
+                
+                <button type="submit" class="button-primary modal-button-submit button-green">
+                    Registrarse
+                </button>
+                
+                <p class="modal-text-center">
+                    ¿Ya tienes una cuenta? 
+                    <a href="#" class="form-link" id="show-login-from-register">Inicia sesión</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Esperar a que el DOM esté completamente cargado
+        document.addEventListener('DOMContentLoaded', function() {
+            // Elementos del DOM
+            const loginBtn = document.getElementById('login-btn');
+            const registerBtn = document.getElementById('register-btn');
+            const loginModal = document.getElementById('login-modal');
+            const registerModal = document.getElementById('register-modal');
+            const closeLoginModal = document.getElementById('close-login-modal');
+            const closeRegisterModal = document.getElementById('close-register-modal');
+            const showRegisterFromLogin = document.getElementById('show-register-from-login');
+            const showLoginFromRegister = document.getElementById('show-login-from-register');
+            const searchInput = document.getElementById('search-input');
+            const searchContainer = document.getElementById('search-container');
+            const searchSuggestions = document.getElementById('search-suggestions');
+            
+            // Función para mostrar un modal
+            function showModal(modal) {
+                modal.classList.remove('hidden');
+                setTimeout(() => {
+                  
+                    modal.classList.add('active'); 
+                    modal.querySelector('.modal-content-box').classList.add('active');
+                }, 10);
+            }
+            
+            // Función para ocultar un modal
+            function hideModal(modal) {
+              
+                modal.querySelector('.modal-content-box').classList.remove('active');
+                setTimeout(() => {
+                    modal.classList.remove('active');
+                    modal.classList.add('hidden');
+                }, 300);
+            }
+                        
+            // Mostrar modal de inicio de sesión
+            if (loginBtn) {
+                loginBtn.addEventListener('click', () => showModal(loginModal));
+            }
+            
+            // Mostrar modal de registro
+            if (registerBtn) {
+                registerBtn.addEventListener('click', () => showModal(registerModal));
+            }
+            
+            // Cerrar modales
+            if (closeLoginModal) {
+                closeLoginModal.addEventListener('click', () => hideModal(loginModal));
+            }
+            if (closeRegisterModal) {
+                closeRegisterModal.addEventListener('click', () => hideModal(registerModal));
+            }
+            
+            // Alternar entre modales de inicio de sesión y registro
+            if (showRegisterFromLogin) {
+                showRegisterFromLogin.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    hideModal(loginModal);
+                    showModal(registerModal);
+                });
+            }
+            
+            if (showLoginFromRegister) {
+                showLoginFromRegister.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    hideModal(registerModal);
+                    showModal(loginModal);
+                });
+            }
+            
+            // Cerrar modales al hacer clic fuera del contenido
+            if (loginModal) {
+                loginModal.addEventListener('click', (e) => {
+                    if (e.target === loginModal) {
+                        hideModal(loginModal);
+                    }
+                });
+            }
+            
+            if (registerModal) {
+                registerModal.addEventListener('click', (e) => {
+                    if (e.target === registerModal) {
+                        hideModal(registerModal);
+                    }
+                });
+            }
+            
+            // Efectos de búsqueda
+            if (searchInput && searchContainer && searchSuggestions) {
+                searchInput.addEventListener('focus', () => {
+                    searchContainer.classList.add('focused');
+                    searchSuggestions.classList.remove('hidden');
+                    searchSuggestions.classList.add('active'); 
+                });
+                
+                searchInput.addEventListener('blur', () => {
+                    searchContainer.classList.remove('focused');
+                    
+                    setTimeout(() => {
+                        if (!searchInput.matches(':focus')) {
+                            searchSuggestions.classList.remove('active'); 
+                            searchSuggestions.classList.add('hidden');
+                        }
+                    }, 200);
+                });
+            }
+            
+            // Manejar el envío de formularios
+            const loginForm = document.getElementById('login-form');
+            if (loginForm) {
+                loginForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    // Aquí iría la lógica para autenticar al usuario
+                    alert('Inicio de sesión simulado. En una implementación real, esto autenticaría al usuario.');
+                    hideModal(loginModal);
+                });
+            }
+            
+            const registerForm = document.getElementById('register-form');
+            if (registerForm) {
+                registerForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    // Aquí iría la lógica para registrar al usuario
+                    alert('Registro simulado. En una implementación real, esto registraría al usuario.');
+                    hideModal(registerModal);
+                });
+            }
+            
+           
+            const books = [
+                { title: "Introducción a la Programación", author: "John Doe", available: true },
+                { title: "Historia del Arte Moderno", author: "Jane Smith", available: true },
+                { title: "Matemáticas Avanzadas", author: "Robert Johnson", available: false },
+                { title: "Física Cuántica", author: "María García", available: true }
+            ];
+            
+            
+            if (searchInput && searchSuggestions) {
+                searchInput.addEventListener('input', () => {
+                    const query = searchInput.value.toLowerCase();
+                    if (query.length > 2) {
+                        // Filtrar libros que coincidan con la consulta
+                        const results = books.filter(book => 
+                            book.title.toLowerCase().includes(query) || 
+                            book.author.toLowerCase().includes(query)
+                        );
+                        
+                        
+                        if (results.length > 0) {
+                            searchSuggestions.innerHTML = `
+                                <div class="suggestions-inner">
+                                    <p class="suggestions-heading">Sugerencias:</p>
+                                    ${results.map(book => `
+                                        <a href="#" class="suggestion-item">${book.title} - ${book.author}</a>
+                                    `).join('')}
+                                </div>
+                            `;
+                            searchSuggestions.classList.remove('hidden');
+                            searchSuggestions.classList.add('active');
+                        } else {
+                            searchSuggestions.innerHTML = `
+                                <div class="suggestions-inner">
+                                    <p class="suggestions-heading">No se encontraron resultados</p>
+                                </div>
+                            `;
+                            searchSuggestions.classList.remove('hidden');
+                            searchSuggestions.classList.add('active');
+                        }
+                    } else {
+                        searchSuggestions.classList.remove('active');
+                        searchSuggestions.classList.add('hidden');
+                    }
+                });
+            }
+            
+            // Manejar reservas de libros
+            document.querySelectorAll('.book-card button:not(:disabled)').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const card = this.closest('.book-card');
+                    const title = card.querySelector('h3').textContent;
+                    alert(`Has reservado el libro: ${title}`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
